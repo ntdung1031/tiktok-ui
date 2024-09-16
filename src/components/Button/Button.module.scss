@@ -1,0 +1,59 @@
+.wrapper {
+    min-width: 100px;
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 9px 16px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.primary {
+    background-color: var(--primary);
+    color: var(--color-while) !important;
+    &:hover {
+        background: liner-gradient(0, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), #fe2c55;
+        opacity: 0.9;
+    }
+}
+.outLine {
+    color: var(--primary) !important;
+    border-color: currentColor;
+}
+// small button
+.small {
+    padding: 6px 12px;
+    font-size: 1.6rem;
+}
+// large
+.large {
+    padding: 12px 24px;
+    font-size: 1.8rem;
+}
+// text button
+.text {
+    background: transparent;
+    border: none;
+    &:hover {
+        color: var(--primary);
+    }
+}
+// disabled button
+.disabled {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.6;
+}
+// rounded button
+.rounded {
+    border-radius: 24px;
+    border-color: var(--color-ccc);
+    padding: 4px 16px;
+    font-size: 1.6rem;
+    box-shadow: 0 2px 8px rgb(0 0 0 /6%);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
