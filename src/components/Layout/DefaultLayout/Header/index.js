@@ -32,10 +32,35 @@ function Header() {
     //         setSearchResult([1, 2, 3]);
     //     }, 1000);
     // });
+    const handleMenuClick = (item) => {
+        switch (item.type) {
+            case 'link':
+                window.location.href = item.to;
+                break;
+            case 'function':
+                item.onClick();
+                break;
+            default:
+                break;
+        }
+    };
     const MENU_iTEMS = [
         {
             icon: <FontAwesomeIcon icon={faEarthAsia} />,
             title: 'English',
+            children: {
+                title: 'Language',
+                data: [
+                    {
+                        code: 'en',
+                        title: 'English',
+                    },
+                    {
+                        code: 'vi',
+                        title: 'Vietnamese',
+                    },
+                ],
+            },
         },
         {
             icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -58,6 +83,7 @@ function Header() {
                     <Tippy
                         interactive={true}
                         // visible={searchResult.length > 0}
+                        delay={[300, 300]}
                         render={(attrs) => (
                             <div className={cx('tooltip-result')} tabIndex={-1} {...attrs}>
                                 <PopperWrapper>
@@ -182,7 +208,7 @@ function Header() {
                         Log in
                     </Button>
 
-                    <Menu items={MENU_iTEMS}>
+                    <Menu items={MENU_iTEMS} onClick={handleMenuClick}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} className={cx('icon-more')} />
                         </button>
