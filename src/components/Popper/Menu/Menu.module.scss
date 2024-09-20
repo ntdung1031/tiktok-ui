@@ -1,6 +1,7 @@
 .btn-lang {
     width: 100%;
     border-radius: 0;
+    color: #444 !important;
     &:hover {
         background-color: #f5f5f5;
     }
@@ -28,4 +29,7 @@
     left: 20px;
 }
 .header-title {
+}
+.separate {
+    border-top: 2px solid #f2f2f2;
 }
