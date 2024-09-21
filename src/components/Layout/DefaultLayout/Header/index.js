@@ -24,6 +24,7 @@ import HeadLessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 // ----
 import Button from '~/components/Button';
+import Image from '~/components/Img';
 import styles from './Header.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
@@ -218,8 +219,8 @@ function Header() {
                             </Tippy>
                         </div>
                         <Menu items={userMenu} onClick={handleMenuClick}>
-                            <img
-                                src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-1/458398813_1298930584405734_3644428127817530000_n.jpg?stp=dst-jpg_s160x160&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeGnAn-lrCgr3eL2eHD90-ajPnQaOW8zVOo-dBo5bzNU6uqVgTDyuCeVeCncZ0B879y_M39HaDnFVtX6MNKjMIXI&_nc_ohc=JYgdzlpHPfkQ7kNvgGsG-9L&_nc_ht=scontent.fsgn5-10.fna&oh=00_AYAzHLOc6dLwmwkI21kPDC99_ALZVTezLrdakvBIVjvhrA&oe=66E4915D"
+                            <Image
+                                src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/458398813_1298930584405734_3644428127817530000_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGnAn-lrCgr3eL2eHD90-ajPnQaOW8zVOo-dBo5bzNU6uqVgTDyuCeVeCncZ0B879y_M39HaDnFVtX6MNKjMIXI&_nc_ohc=nMgLRDqB0cMQ7kNvgHkPA0B&_nc_ht=scontent.fsgn5-10.fna&_nc_gid=Au4pbpZsfBg033A7VZ5qFgT&oh=00_AYB3gu7qNPMbNGCvPZmINezMJHVfe1386GU8XAGmnxw5Jw&oe=66F4365F"
                                 alt="avt"
                                 className={cx('avt-img')}
                             />
